@@ -23,12 +23,17 @@ public class ConsoleUI {
             switch (choice) {
                 case 1 -> borrowBook();
                 case 2 -> returnBook();
-                case 3 -> IO.println("Show all loans");
+                case 3 -> showLoans();
                 case 0 -> running = false;
                 default -> IO.println("ERROR try again");
             }
         }
         IO.println("Shutting down, have a good day :)");
+    }
+
+    private void showLoans() {
+        int memberID = Integer.parseInt(IO.readln("Input your member ID: "));
+        library.findLoansByMemberID(memberID);
     }
 
     private void returnBook() {
