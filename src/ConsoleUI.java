@@ -1,3 +1,32 @@
 public class ConsoleUI {
-private Library library;
+    private Library library;
+
+    public ConsoleUI(Library lib){
+        this.library = lib;
+    }
+
+    public void run(){
+        boolean running = true;
+        while (running) {
+            showMenu();
+            int choice = Integer.parseInt(IO.readln("Indtast valg: "));
+            switch (choice) {
+                case 1 -> IO.println("Lån");
+                case 2 -> IO.println("Aflever");
+                case 3 -> IO.println("Vis alle lån");
+                case 0 -> running = false;
+                default -> IO.println("Ugyldigt valg. Prøv igen");
+            }
+        }
+    }
+
+    public void showMenu(){
+        IO.println();
+        IO.println("1. Lån");
+        IO.println("2. Aflever");
+        IO.println("3. Vis alle lån");
+        IO.println("0. Afslut");
+        IO.println();
+    }
+
 }
