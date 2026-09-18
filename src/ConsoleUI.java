@@ -11,13 +11,21 @@ public class ConsoleUI {
             showMenu();
             int choice = Integer.parseInt(IO.readln("Indtast valg: "));
             switch (choice) {
-                case 1 -> IO.println("Lån");
-                case 2 -> IO.println("Aflever");
+                case 1 -> borrowBook();
+                case 2 -> returnBook();
                 case 3 -> IO.println("Vis alle lån");
                 case 0 -> running = false;
                 default -> IO.println("Ugyldigt valg. Prøv igen");
             }
         }
+    }
+
+    private void returnBook() {
+
+    }
+
+    private void borrowBook() {
+
     }
 
     public void showMenu(){
