@@ -51,6 +51,7 @@ public class Library {
                 temp.add(loan);
             }
         }
+        if(temp.isEmpty()) return null;
         return temp;
         
     }
