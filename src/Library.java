@@ -79,21 +79,21 @@ public class Library {
 
 
     public void printBooks(){
-        for (int i = 0; i < books.size(); i++) {
-            IO.println(books.get(i));
+        for (Book book : books) {
+            IO.println(book);
         }
         IO.println();
     }
     public void printMembers(){
-        for (int i = 0; i < members.size(); i++) {
-            IO.println(members.get(i));
+        for (Member member : members) {
+            IO.println(member);
         }
         IO.println();
 
     }
     public void printLoans() {
-        for (int i = 0; i < loans.size(); i++) {
-            IO.println(loans.get(i));
+        for (Loan loan : loans) {
+            IO.println(loan);
         }
         IO.println();
     }
