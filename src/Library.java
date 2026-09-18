@@ -17,26 +17,26 @@ public class Library {
 
 
     public Book getBook(int bookID) {
-        for (int i = 0; i < books.size(); i++) {
-            if (books.get(i).getID() == bookID) {
-                return books.get(i);
+        for (Book book : books) {
+            if (book.getID() == bookID) {
+                return book;
             }
         }
         return null;
     }
 
     public Member getMember(int memberID) {
-        for (int i = 0; i < members.size(); i++) {
-            if (members.get(i).getID() == memberID) {
-                return members.get(i);
+        for (Member member : members) {
+            if (member.getID() == memberID) {
+                return member;
             }
         }
         return null;
     }
     
     public boolean isAvailable(int bookID){
-        for (int i = 0; i < loans.size(); i++) {
-            if(loans.get(i).getBook().getID() == bookID){
+        for (Loan loan : loans) {
+            if (loan.getBook().getID() == bookID) {
                 return false;
             }
         }
@@ -46,9 +46,9 @@ public class Library {
     public ArrayList<Loan> findLoansByMemberID(int memberID){
         ArrayList<Loan> temp = new ArrayList<>();
 
-        for (int i = 0; i < loans.size(); i++) {
-            if (loans.get(i).getMember().getID() == memberID){
-                temp.add(loans.get(i));
+        for (Loan loan : loans) {
+            if (loan.getMember().getID() == memberID) {
+                temp.add(loan);
             }
         }
         return temp;
