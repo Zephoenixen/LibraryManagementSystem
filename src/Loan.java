@@ -43,9 +43,9 @@ public class Loan {
     public String toString() {
         return String.format(
         """
-        --- Book --- 
+        --- Book ---
         %s
-        borrowed by: 
+        borrowed by:
         %s
         Due by: %s
         Is overdue? %s
