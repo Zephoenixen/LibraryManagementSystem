@@ -33,7 +33,7 @@ public class ConsoleUI {
 
     private void showLoans() {
         int memberID = Integer.parseInt(IO.readln("Input your member ID: "));
-        library.findLoansByMemberID(memberID);
+        IO.println(library.findLoansByMemberID(memberID));
     }
 
     private void returnBook() {
