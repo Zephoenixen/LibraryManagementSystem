@@ -5,6 +5,16 @@ public class ConsoleUI {
         this.library = lib;
     }
 
+    public void showMenu(){
+
+        IO.println();
+        IO.println("1. Lån");
+        IO.println("2. Aflever");
+        IO.println("3. Vis alle lån");
+        IO.println("0. Afslut");
+        IO.println();
+    }
+
     public void run(){
         boolean running = true;
         while (running) {
@@ -55,14 +65,6 @@ public class ConsoleUI {
 
     }
 
-    public void showMenu(){
 
-        IO.println();
-        IO.println("1. Lån");
-        IO.println("2. Aflever");
-        IO.println("3. Vis alle lån");
-        IO.println("0. Afslut");
-        IO.println();
-    }
 
 }
