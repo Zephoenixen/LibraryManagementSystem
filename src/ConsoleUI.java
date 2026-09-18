@@ -1,5 +1,5 @@
 public class ConsoleUI {
-    private Library library;
+    private final Library library;
 
     public ConsoleUI(Library lib){
         this.library = lib;
@@ -25,6 +25,15 @@ public class ConsoleUI {
     }
 
     private void borrowBook() {
+        library.printBooks();
+
+        int memberID = Integer.parseInt(IO.readln("Indtast dit medlemsnummer"));
+        int bookID = Integer.parseInt(IO.readln("Indtast dit ID af bogen du vil låne"));
+
+        if(library.loanBook(bookID, memberID)){
+            IO.println("Du har lånt: " + library.getBook(bookID) + ".");
+        }
+        else IO.println("Der er sket en fejl.");
 
     }
 
