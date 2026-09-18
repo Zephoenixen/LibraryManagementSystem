@@ -28,6 +28,7 @@ public class ConsoleUI {
                 default -> IO.println("ERROR try again");
             }
         }
+        IO.println("Shutting down, have a good day :)");
     }
 
     private void returnBook() {
